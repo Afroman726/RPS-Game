@@ -1,13 +1,37 @@
-let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
 
-for (let i = 1; i <= answer; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log("FizzBuzz");
-    } else if (i % 3 ===0){
-        console.log("Fizz");
-    } else if (i % 5 === 0){
-        console.log("Buzz");
-    } else{
-        console.log(i);
-    }
+const R = 'Rock';
+const P = 'Paper';
+const S = 'Scissors';
+let playerScore = 0;
+let computerScore = 0;
+const computerSelection = getRandomChoice();
+const playerSelection = 'Rock';
+
+
+function playRound(playerSelection, computerSelection){
+
+
+
 }
+
+
+
+
+function getRandomChoice(){
+    let randomNumber = Math.floor(Math.random() * 3)
+    switch (randomNumber){
+        case 0:
+            return 'Rock'
+        case 1:
+            return 'Paper'
+        case 2:
+            return 'Scissors'
+    }
+
+
+
+
+}
+
+
+
