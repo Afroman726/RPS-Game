@@ -4,22 +4,44 @@ const P = 'Paper';
 const S = 'Scissors';
 let playerScore = 0;
 let computerScore = 0;
-const computerSelection = getRandomChoice();
-const playerSelection = getRandomChoice();
+let computerSelection = getRandomChoice();
+let playerSelection = prompt("Choose Rock, Paper, or Scissors");
 
 
-    function playRound(playerSelection, computerSelection){
-    if (playerSelection == computerSelection){
-        console.log("Tie!!");
-    } else if (
+function getRandomChoice(){
+    let randomNumber = Math.floor(Math.random() * 3)
+    switch (randomNumber){
+        case 0:
+            return R
+        case 1:
+            return P    
+        case 2:
+            return S
+    }
+
+
+
+
+}  
+
+
+
+
+
+
+function playRound(playerSelection, computerSelection){
+   if (playerSelection == computerSelection){
+    console.log("Tie!!")
+   }
+   else  if (
         (playerSelection === 'Rock' && computerSelection === 'Scissors') ||
         (playerSelection === 'Scissors' && computerSelection === 'Paper') ||
         (playerSelection === 'Paper' && computerSelection === 'Rock')
 ){console.log("Winner!");
 } else if (
-    (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') ||
-    (computerSelection === 'SCISSORS' && playerSelection === 'PAPER') ||
-    (computerSelection === 'PAPER' && playerSelection === 'ROCK')
+    (computerSelection === 'Rock' && playerSelection === 'Scissors') ||
+    (computerSelection === 'Scissors' && playerSelection === 'Paper') ||
+    (computerSelection === 'Paper' && playerSelection === 'Rock')
 ) { console.log("LOSER");
 
 }
@@ -30,22 +52,7 @@ const playerSelection = getRandomChoice();
 
 
 
-function getRandomChoice(){
-    let randomNumber = Math.floor(Math.random() * 3)
-    switch (randomNumber){
-        case 0:
-            return 'Rock'
-        case 1:
-            return 'Paper'
-        case 2:
-            return 'Scissors'
-    }
 
 
 
-
-}
-
-
- 
-playRound();
+playRound(playerSelection, computerSelection);
