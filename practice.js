@@ -5,11 +5,24 @@ const S = 'Scissors';
 let playerScore = 0;
 let computerScore = 0;
 const computerSelection = getRandomChoice();
-const playerSelection = 'Rock';
+const playerSelection = getRandomChoice();
 
 
-function playRound(playerSelection, computerSelection){
+    function playRound(playerSelection, computerSelection){
+    if (playerSelection == computerSelection){
+        console.log("Tie!!");
+    } else if (
+        (playerSelection === 'Rock' && computerSelection === 'Scissors') ||
+        (playerSelection === 'Scissors' && computerSelection === 'Paper') ||
+        (playerSelection === 'Paper' && computerSelection === 'Rock')
+){console.log("Winner!");
+} else if (
+    (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') ||
+    (computerSelection === 'SCISSORS' && playerSelection === 'PAPER') ||
+    (computerSelection === 'PAPER' && playerSelection === 'ROCK')
+) { console.log("LOSER");
 
+}
 
 
 }
@@ -34,4 +47,5 @@ function getRandomChoice(){
 }
 
 
-
+ 
+playRound();
