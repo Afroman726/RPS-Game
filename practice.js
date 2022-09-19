@@ -4,6 +4,7 @@ const P = 'Paper';
 const S = 'Scissors';
 let playerScore = 0;
 let computerScore = 0;
+let score = 0;          // NOTE!!: When putting a var inside for loop, the loop resets the var.  Must put var in a larger scope to retain score/info!
 
 
 
@@ -28,16 +29,15 @@ function getRandomChoice(){             //This is the logic for the computer pic
 };  
 
     const game =()=> {
-    let rounds= prompt('How many rounds would you like to play?');
+    let rounds= prompt('How many rounds would you like to play?');   //For loop is for how many rounds to play.  
         for (let i = 0; i < rounds; i++){
 
          let playerSelection = prompt("Choose Rock, Paper, or Scissors");
         
          let computerSelection = getRandomChoice();
-        let score = 0;
     
     
-            if (playerSelection == computerSelection){
+            if (playerSelection == computerSelection){          //Having trouple updating score using if statement inside for loop
             console.log("Tie!!")
            }else  if (
                 (playerSelection === 'Rock' && computerSelection === 'Scissors') ||     //The actual execution for the game, Tie, Win, or Lose.
