@@ -29,7 +29,7 @@ header{
 #title{
     display:flex;
     flex: 1;
-    font-family:papyrus;
+    font-family:Scotch Modern;
     margin-top: 0px;
     width: 70%;
     color: #f8f8ff;
@@ -39,6 +39,16 @@ header{
     align-items: center;
     justify-content: center;
     
+}
+
+#display_Score{
+    display:flex;
+    flex:1;
+    font-family:CopperPlate;
+    font-size: 60px;
+    color:#f8f8ff;
+    align-items: center;
+    justify-content: center;
 }
 
 #icon_Holder{
@@ -58,9 +68,23 @@ header{
     flex:1;
     justify-content: center;
     margin-bottom: 500px;
+   
+}
+#rock{
+    font-family: Lovelace;
+}
+#paper{
+    font-family: Broadsheet;
+}
+#scissors{
+    font-family: Phaeton;
 }
 
-
+button{
+    flex:1;
+    justify-content: center;
+    font-size: 65px;
+}
 body{
     background-color:black;
    

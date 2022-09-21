@@ -28,11 +28,11 @@ function getRandomChoice(){             //This is the logic for the computer pic
 
 };  
 
-    const game =()=> {
-    let rounds= prompt('How many rounds would you like to play?');   //For loop is for how many rounds to play.  
-        for (let i = 0; i < rounds; i++){
+    const game =(playerSelection)=> {
+   
+        for (let i = 0; i < 5; i++){
 
-         let playerSelection = prompt("Choose Rock, Paper, or Scissors");
+
         
          let computerSelection = getRandomChoice();
     
@@ -44,13 +44,13 @@ function getRandomChoice(){             //This is the logic for the computer pic
                 (playerSelection === 'Scissors' && computerSelection === 'Paper') ||
                 (playerSelection === 'Paper' && computerSelection === 'Rock')
         ){ score++;
-            console.log("winner!  Your current score is " +score + '.' );
+            console.log("winner!  Your current score is " +score + '. The computer chose ' +computerSelection +' .' );
            }else if (
             (computerSelection === 'Rock' && playerSelection === 'Scissors') ||
             (computerSelection === 'Scissors' && playerSelection === 'Paper') ||
             (computerSelection === 'Paper' && playerSelection === 'Rock')
         ) { score--;
-            console.log("LOSER! Your current score is " +score +' .');
+            console.log("LOSER! Your current score is " +score +' . The computer chose ' +computerSelection + ' .');
           
              }
         }
@@ -58,9 +58,7 @@ function getRandomChoice(){             //This is the logic for the computer pic
 
 
    
-
-game()
-
+  
 
 
 
