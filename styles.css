@@ -62,7 +62,7 @@ header{
     align-items: center;
     justify-content: center;
     color:#f8f8ff;
-    font-size: 45px;
+    font-size: 15px;
 }
 
 .icon{
@@ -95,6 +95,34 @@ button{
     justify-content: center;
     font-size: 65px;
 }
+
+@media only screen and (max-width:750px){
+    #icon_Holder{
+    display: flex;
+    flex: 1;
+    flex-shrink:1;
+   padding: 15px;
+    background: #1f2937;
+    height:auto;
+    align-items: center;
+    justify-content: center;
+    color:#f8f8ff;
+    font-size: 15px;
+    flex-direction: column;
+    }
+    
+    .icon{
+        display:flex;
+        flex:1;
+        flex-shrink:1;
+        justify-content: center;
+        margin-bottom: 5px;
+        font-size:15px;
+        width:200px;
+}
+    
+}
+
 body{
     background-color:black;
    
